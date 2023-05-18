@@ -1,0 +1,75 @@
+1.1
+
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS                      PORTS     NAMES
+54e61ddd6fa2   nginx         "/docker-entrypoint.…"   7 minutes ago    Up 7 minutes                80/tcp    objective_dijkstra
+58829c5b9e7d   nginx         "/docker-entrypoint.…"   7 minutes ago    Exited (0) 53 seconds ago             frosty_neumann
+b14fc0af7e91   nginx         "/docker-entrypoint.…"   11 minutes ago   Exited (0) 41 seconds ago             heuristic_lewin
+
+1.2
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+1.3
+
+docker run -d --name web-service devopsdockeruh/simple-web-service:ubuntu
+
+docker exec -it web-service bash
+
+tail -f ./text.log
+
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+1.4
+
+docker run -it --name website ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; apt-get update; apt-get install -y curl; curl http://$website; done'
+
+1.5
+
+docker run -d --name testi fd312adc88e0
+docker exec -it testi sh
+tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+1.6
+
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+1.8
+
+docker run web-server
+
+1.9
+
+docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+
+1.10
+
+docker run -p 127.0.0.1:3000:8080 web-server
+
+1.13
+
+docker run -p 127.0.0.1:3000:8080 hello-backend
+
+1.14
+
+docker run -p 127.0.0.1:3001:8080 backend
+docker run -p 127.0.0.1:3000:5000 frontend
+
+1.15
+
+https://hub.docker.com/r/roni120/ot-harjoitus
+
+1.16 
+
+I deployed the course material to the render
+
+https://testisovellus.onrender.com/
+
+
+
