@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./material-applications/example-frontend
+    ports:
+      - 3000:5000
+    depends_on:
+      - backend
+
+  backend:
+    build: ./material-applications/example-backend
+    ports:
+      - 3001:8080
+    depends_on:
+      - redis
+      - db
+    environment:
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=db
+
+  redis:
+    image: redis:latest
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DATABASE: postgres

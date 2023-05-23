@@ -1,0 +1,6 @@
+image size before optimizations:
+1.06 GB
+
+image size after optimizations:
+249 MB
+

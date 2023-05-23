@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+    web-service:
+      image: devopsdockeruh/simple-web-service
+      command: server -p 8080
+      ports:
+        - 3001:8080
